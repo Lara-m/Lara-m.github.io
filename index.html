@@ -9,7 +9,10 @@
     <script>
       $(function () {
         console.log("ready; set; go;");
-        $('#nav-tab a[href="#home"]').tab('show') // Select tab by name
+        $('#nav-tab a').on('click', function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        })
       });
     </script>
   </head>
@@ -38,7 +41,6 @@
       </ul>
     </nav>
 
-    <main role="main" class="container">
       <!-- Tab panes -->
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -67,7 +69,6 @@
           </div>          
         </div>
       </div>
-    </main>
     <!--main role="main" class="container">
       <div class="container p-5 my-5 border"> 
       <div class="jumbotron">
