@@ -13,8 +13,8 @@
         let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.json"
         fetch(file)
           .then(data => data.json())
-          .then(data => JSON.parse(data.posts.text()))
           .then(data => console.log(data))
+          .then(data => JSON.parse(data.posts()))
           .then(data => document.getElementById('posts').innerHTML=JSON.stringify(data, undefined, 2));
       });
     </script>
