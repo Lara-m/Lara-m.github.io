@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script>
       $(function () {
-        console.log("ready");
+        console.log("ready; set; go;");
         //$('#home a[href="#home"]').tab('show') // Select tab by name
       });
     </script>
@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark mb-4" style="background-color: #03002e;">
       <a class="navbar-brand px-3" href="#">Lara's Personal Pages</a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!--div class="collapse navbar-collapse" id="navbarCollapse"-->
         <!--ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home</a>
@@ -29,21 +29,21 @@
           </li>
         </ul-->
         <!-- Nav tabs -->
-        <ul class="navbar-nav mr-auto" id="myTab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link" id="home-tab" data-toggle="tab" role="tab" href="#home" aria-controls="home">Home</a>
+        <ul class="nav-tabs mr-auto" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" href="#home" aria-controls="home" aria-selected="true">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="blog-tab" data-toggle="tab" role="tab" href="#blog" aria-controls="blog">Blog</a>
+            <a class="nav-link" id="blog-tab" data-toggle="tab" role="tab" href="#blog" aria-controls="blog" aria-selected="false">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" role="tab" href="#contact" aria-controls="contact">Contact</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" role="tab" href="#contact" aria-controls="contact" aria-selected="false">Contact</a>
           </li>
           <!--li class="nav-item">
             <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Settings</a>
           </li-->
         </ul>
-      </div>
+      <!--/div-->
     </nav>
 
     <main role="main" class="container">
