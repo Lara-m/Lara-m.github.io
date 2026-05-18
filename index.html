@@ -16,23 +16,58 @@
     <nav class="navbar navbar-expand-md navbar-dark mb-4" style="background-color: #03002e;">
       <a class="navbar-brand px-3" href="#">Lara's Personal Pages</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+        <!--ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Nada</a>
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul-->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <main role="main" class="container">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="container p-5 my-5 border"> 
+            <div class="jumbotron">
+              <h1>Still under construction!</h1>
+              <p class="lead">Lorem ipsum or something like that...</p>      
+            </div>
+          </div> 
+        </div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+      </div>
+    </main>
+    <!--main role="main" class="container">
       <div class="container p-5 my-5 border"> 
       <div class="jumbotron">
         <h1>Still under construction!</h1>
         <p class="lead">Lorem ipsum or something like that...</p>      
       </div>
-    </main>
+  </main-->
     <footer class="footer fixed-bottom bg-light">
       <div class="container">
         <span class="text-muted"> Copyright Lara-m 2026. How did you get here? :/</span>
