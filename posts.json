@@ -1,9 +1,0 @@
-{
-  "posts": [
-    {"title":"Lara-m.github.io", "body":"Hey world, can you hear me?"},
-    {"title":"At some point, something must have come from nothing.", "body": " * Title is a quote from Sophie's World by Jostein Gaarder.<br>This used to be the readme file. But I want to see if I can make blog posts out of it and display it in the pages.<br>Note to self, clean this up later and CHECK FOR TYPOS!"},
-    {"title":"Third time is a charm!", "body": "Third entery. Lorem ipsum or something like that."},
-    {"title":"The parsing hell", "body": "RegEx was the bane of my existence... then I met LaTex. :|"},
-    {"title":"A Human Soul in the age of Artificial Intelligence", "body": "Something like 67,000 yrs old handprints in a cave."}
-  ]
-}
