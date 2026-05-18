@@ -1,3 +1,8 @@
+# Cerberus
+
+The king of the underworld has a dog named "spot". 
+
+Suddently, hell doesn't seem that scary, does it? 
 
 --- 
 # A Human Soul in the age of Artificial Intelligence
