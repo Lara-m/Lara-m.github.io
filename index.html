@@ -10,9 +10,10 @@
     <script>
       $().ready(function() {
         console.log("ready; set; go.");
-        let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.md"
+        let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.json"
         fetch(file)
-          .then(content => content.text())
+          .then(response = >response.json())
+          .then(content => content.posts())
           .then(content => document.getElementById('posts').innerHTML=content);
       });
     </script>
