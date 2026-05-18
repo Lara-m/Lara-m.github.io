@@ -9,39 +9,36 @@
     <script>
       $(function () {
         console.log("ready; set; go;");
-      });
-      const triggerTabList = document.querySelectorAll('#mytab button')
-        triggerTabList.forEach(triggerEl => {
-          const tabTrigger = new bootstrap.Tab(triggerEl)
-            triggerEl.addEventListener('click', event => {
-              event.preventDefault()
-                tabTrigger.show()
-            })
-        });
+      })
     </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: #03002e">
-      <div class="container-fluid">
+      <div class="collapse navbar-collapse">
       <a class="navbar-brand px-3" href="#">Lara's Personal Pages</a>
-      <div class="nav nav-tabs mr-auto" id="mytab" role="tablist">
-        <button class="nav-link active" id="nav-home" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-        <button class="nav-link" id="nav-blog" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">Blog</button>
-        <button class="nav-link" id="nav-contact" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-      </div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a>
+        </li>
+      </ul>
     </nav>
 
-      <!-- Tab panes -->
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home">
-          <div class="container p-5 my-5 border"> 
-            <div class="jumbotron">
-              <h1>Still under construction!</h1>
-              <p class="lead">Lorem ipsum or something like that...</p>      
-            </div>
-          </div> 
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active">
+        <div class="container p-5 my-5 border"> 
+          <div class="jumbotron">
+            <h1>Still under construction!</h1>
+            <p class="lead">Lorem ipsum or something like that...</p>      
+          </div>
         </div>
-        <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="nav-blog">
+      </div>
+        <div id="blog" class="container tab-pane active">
           <div class="container p-5 my-5 border"> 
             somehow getting the md file here... soon, hopefully.
             <div class="container">
@@ -49,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="nav-contact">
+        <div id="blog" class="container tab-pane active">
           <div class="container p-5 my-5 border">
             <h1> Why are you even here?</h1>
             <p class="lead"> If you got here from another link, you know how to reach me.
