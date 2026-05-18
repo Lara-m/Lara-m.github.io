@@ -10,11 +10,15 @@
     <script>
       $().ready(function() {
         console.log("ready; set; go.");
+        let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.md"
+        fetch(file)
+          .then(content => content.text())
+          .then(content => document.getElementById('posts').innerHTML=content);
       });
     </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: #03002e;">
+    <nav class="navbar navbar-expand-xl navbar-dark mb-4" style="background-color: #03002e;">
       <a class="navbar-brand px-3" href="#">Lara's Personal Pages</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav" id="myTab" role="tablist">
@@ -29,14 +33,14 @@
         <div class="container p-5 my-5 border"> 
           <div class="jumbotron">
             <h1>Still under construction!</h1>
-            <p class="lead">Lorem ipsum or something like that...</p>      
+            <p class="lead">Lorem ipsum or something like that...</p>
           </div>
         </div>
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <div class="container p-5 my-5 border"> 
             somehow getting the md file here... soon, hopefully.
-            <div class="container">
+            <div class="container" id="posts">
               {{ content }}
             </div>
           </div>
