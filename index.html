@@ -11,14 +11,7 @@
     <script>
       $().ready(function() {
         console.log("ready; set; go.");
-        
-        //let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.json"
-        //fetch(file)
-        //  .then(data => data.json())
-        //  .then(data => console.log(data))
-        //  .then(data => JSON.parse(data.text()))
-        //  .then(data => document.getElementById('posts').innerHTML=JSON.stringify(data, undefined, 2));
-        fetch('./posts.md')
+                fetch('./posts.md')
           .then(r => r.text())
           .then(md => { document.getElementById('blog-post').innerHTML = marked.parse(md);
         });
@@ -47,7 +40,6 @@
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <div class="container p-5 my-5 border"> 
-            <!--pre id="posts"/-->
           <div id="blog-post"></div>
           </div>
       </div>
@@ -62,7 +54,6 @@
         </div>
       </div>
     </div>
-
 
     <footer class="footer fixed-bottom bg-light">
       <div class="container">
