@@ -10,53 +10,30 @@
       $(function () {
         console.log("ready; set; go;");
       });
+      const triggerTabList = document.querySelectorAll('#mytab button')
+        triggerTabList.forEach(triggerEl => {
+          const tabTrigger = new bootstrap.Tab(triggerEl)
+            triggerEl.addEventListener('click', event => {
+              event.preventDefault()
+                tabTrigger.show()
+            })
+        });
     </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: #03002e">
       <div class="container-fluid">
       <a class="navbar-brand px-3" href="#">Lara's Personal Pages</a>
-        <!--ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-        </ul-->
-        <ul class="nav mar-auto" id="nav-tab" role="tablist">
-          <!--li class="nav-item">
-            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" role="tab" href="#home" aria-controls="home-tab" aria-selected="true">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="nav-blog-tab" data-toggle="tab" role="tab" href="#blog" aria-controls="blog-tab" aria-selected="false">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" href="#contact" aria-controls="contact-tab" aria-selected="false">Contact</a>
-        </li-->
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="nav-blog-tab" data-bs-toggle="tab" data-bs-target="#blog-tab-pane" type="button" role="tab" aria-controls="blog-tab-pane" aria-selected="false">Blog</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-        <button class="nav-link" id="nav-blog-tab" data-bs-toggle="tab" data-bs-target="#blog-tab-pane" type="button" role="tab" aria-controls="blog-tab-pane" aria-selected="false">blog</button>
-        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+      <div class="nav nav-tabs mr-auto" id="mytab" role="tablist">
+        <button class="nav-link active" id="nav-home" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+        <button class="nav-link" id="nav-blog" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">Blog</button>
+        <button class="nav-link" id="nav-contact" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
       </div>
     </nav>
 
       <!-- Tab panes -->
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home">
           <div class="container p-5 my-5 border"> 
             <div class="jumbotron">
               <h1>Still under construction!</h1>
@@ -64,7 +41,7 @@
             </div>
           </div> 
         </div>
-        <div class="tab-pane fade" id="blog-tab-pane" role="tabpanel" aria-labelledby="nav-blog-tab">
+        <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="nav-blog">
           <div class="container p-5 my-5 border"> 
             somehow getting the md file here... soon, hopefully.
             <div class="container">
@@ -72,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="nav-contact">
           <div class="container p-5 my-5 border">
             <h1> Why are you even here?</h1>
             <p class="lead"> If you got here from another link, you know how to reach me.
@@ -82,13 +59,7 @@
           </div>          
         </div>
       </div>
-    <!--main role="main" class="container">
-      <div class="container p-5 my-5 border"> 
-      <div class="jumbotron">
-        <h1>Still under construction!</h1>
-        <p class="lead">Lorem ipsum or something like that...</p>      
-      </div>
-  </main-->
+
     <footer class="footer fixed-bottom bg-light">
       <div class="container">
         <span class="text-muted"> Copyright Lara-m 2026. How did you get here? :/</span>
