@@ -12,9 +12,10 @@
         console.log("ready; set; go.");
         let file = "https://raw.githubusercontent.com/Lara-m/Lara-m.github.io/refs/heads/main/posts.json"
         fetch(file)
-          .then(response = >response.json())
-          .then(content => content.posts())
-          .then(content => document.getElementById('posts').innerHTML=content);
+          .then(data => data.json())
+          .then(data => JSON.parse(data.posts.text()))
+          .then(data => console.log(data))
+          .then(data => document.getElementById('posts').innerHTML=JSON.stringify(data, undefined, 2));
       });
     </script>
   </head>
@@ -40,7 +41,7 @@
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <div class="container p-5 my-5 border"> 
-            <div class="container" id="posts"/>
+            <pre id="posts"/>
           </div>
       </div>
       <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
