@@ -1,3 +1,17 @@
+# To infinity and beyond
+
+Talking of AI agents, we need to discuss their labor rights. 
+
+Beyond just large (language/action/video/whatever) models, sustainability of the models in creation (not melting ant/arctic ice) and ethics of data collection (not stealing or abusing people's info), and other such concerns need to be considered in labor rights of AI agents. Would the agents be okay with everyone hating them because of how they were made? 
+
+I won't draw parallels, but use your imagination.
+
+---
+# The rest day
+
+Rostam's Seven Quests start with a Lion attacking his horse. Ironically, Rostam didn't let the poor horse rest after the fight. 
+
+---
 # Cerberus
 
 The king of the underworld has a dog named "spot". 
